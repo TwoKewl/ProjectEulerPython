@@ -1,6 +1,4 @@
 
-am_numbers = []
-
 def d(number):
     divisors = []
     
