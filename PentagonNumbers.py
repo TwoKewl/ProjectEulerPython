@@ -22,7 +22,7 @@ while r:
             if k + j in vals:
                 print(f'{j} - {k} = {j - k}')
                 if j - k in vals:
-                    print(f'{j} - {k} = {j - k}')
+                    print(j - k)
                     exit()
             if k > j:
                 break
