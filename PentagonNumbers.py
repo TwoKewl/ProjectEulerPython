@@ -1,15 +1,29 @@
+import time
+
+vals = []
+
+def p_list(list, count):
+    for i in range(count):
+        list.append(p(i+1))
+    print("func done")
+    return list
+
+def p(n):
+    return n*(3*n-1)//2
 
 
-def get_pentagon():
-    vals = []
-    for n in range(1,10001):
-        vals.append(n*(3*n-1)//2)
-        
-    return vals
+p_list(vals, 10000)
 
-vals = get_pentagon()
+r = True
 
-for val1 in vals:
-    for val2 in vals:
-        if abs(val1 - val2) in vals and val1 + val2 in vals:
-            print(abs(val1-val2))
+while r:
+    for j in vals:
+        for k in vals:
+            if k + j in vals:
+                print(f'{j} - {k} = {j - k}')
+                if j - k in vals:
+                    print(f'{j} - {k} = {j - k}')
+                    exit()
+            if k > j:
+                break
+            
