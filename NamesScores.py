@@ -9,6 +9,7 @@ total_sum = 0
 
 for name in names:
     name_sum = 0
+    
     for l in name:
         for a in range(len(alphabet)):
             if alphabet[a] == l:
